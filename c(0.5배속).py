@@ -25,19 +25,19 @@ while running:
             running = False
         if(event.type == pygame.KEYDOWN):
             if(event.key == pygame.K_d):
-                note_list.append([(pygame.time.get_ticks() - current_time), 1])
+                note_list.append([(pygame.time.get_ticks() - current_time)/2, 1])
                 
             if(event.key == pygame.K_f):
-                note_list.append([pygame.time.get_ticks() - current_time, 2])
+                note_list.append([(pygame.time.get_ticks() - current_time)/2, 2])
                 current_time = pygame.time.get_ticks()
             if(event.key == pygame.K_g):
-                note_list.append([pygame.time.get_ticks() - current_time, 3])
+                note_list.append([(pygame.time.get_ticks() - current_time)/2, 3])
                 current_time = pygame.time.get_ticks()
             if(event.key == pygame.K_h):
-                note_list.append([pygame.time.get_ticks() - current_time, 4])
+                note_list.append([(pygame.time.get_ticks() - current_time)/2, 4])
                 current_time = pygame.time.get_ticks()
             if(event.key == pygame.K_j):
-                note_list.append([pygame.time.get_ticks() - current_time, 5])
+                note_list.append([(pygame.time.get_ticks() - current_time)/2, 5])
                 current_time = pygame.time.get_ticks()
         
             print(len(note_list))
