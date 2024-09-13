@@ -15,10 +15,6 @@ WHITE = (255, 255, 255)
 note_list = []
 current_time = pygame.time.get_ticks()
 
-#0 : 쇼트
-#1 : 동타
-#2 : 롱
-
 
 
 # 게임 루프
@@ -28,27 +24,27 @@ while running:
         if event.type == pygame.QUIT:
             running = False
         if(event.type == pygame.KEYDOWN):
-            print(pygame.time.get_ticks() - current_time)
-            if(pygame.time.get_ticks() - current_time < 5):
-                note_list[-1]['time'] += pygame.time.get_ticks() - current_time
-                note_list[-1]['type'] = 1
+            if(event.key == pygame.K_d):
+                note_list.append([pygame.time.get_ticks() - current_time, 1])
                 
+            if(event.key == pygame.K_f):
+                note_list.append([pygame.time.get_ticks() - current_time, 2])
                 current_time = pygame.time.get_ticks()
-                
-            else:
-                note_list.append({
-                    'time' : pygame.time.get_ticks() - current_time,
-                    'type' : 0,
-                    'len' : 0
-                })
-                
-                note_list.append(pygame.time.get_ticks() - current_time)
+            if(event.key == pygame.K_g):
+                note_list.append([pygame.time.get_ticks() - current_time, 3])
                 current_time = pygame.time.get_ticks()
+            if(event.key == pygame.K_h):
+                note_list.append([pygame.time.get_ticks() - current_time, 4])
+                current_time = pygame.time.get_ticks()
+            if(event.key == pygame.K_j):
+                note_list.append([pygame.time.get_ticks() - current_time, 5])
+                current_time = pygame.time.get_ticks()
+        
+            print(len(note_list))
+
     
     
-    
-    
-    # 화면을 흰색으로 채우기
+    # 화면을 흰색으로 채우기ddk
     screen.fill(WHITE)
     
     # Pygame 화면 업데이트
