@@ -3,6 +3,11 @@ import pygame
 # Pygame 초기화
 pygame.init()
 
+
+# print
+print("시작합니다")
+
+
 # 화면 크기 설정
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
@@ -16,7 +21,7 @@ note_list = []
 current_time = pygame.time.get_ticks()
 
 
-
+#########################
 # 게임 루프
 running = True
 while running:
